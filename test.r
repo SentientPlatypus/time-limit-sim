@@ -1,4 +1,4 @@
-data <- read.csv("data.csv")
+data <- read.csv("data.csv", quote="")
 
 
 timed <- subset(data, treatment == "timed")
@@ -36,12 +36,10 @@ t_dp_proportion<- function() {
 
 t_dp_attempted <- function() {
   stripchart(timed["attempted"], method = "stack", offset = .5, at = 0, pch = 20,
-                col = "steelblue", main = "Timed Proportion Correct", xlab = "Proportion")
+           col = "steelblue", main = "Timed Proportion Correct", xlab = "Proportion")
   }
 
 t_dp_correct<- function() {
   stripchart(timed["correct"], method = "stack", offset = .5, at = 0, pch = 20,
                 col = "steelblue", main = "Timed Proportion Correct", xlab = "Proportion")
   }
-
-
