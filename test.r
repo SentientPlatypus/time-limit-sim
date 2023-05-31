@@ -43,3 +43,4 @@ t_dp_correct<- function() {
   stripchart(timed["correct"], method = "stack", offset = .5, at = 0, pch = 20,
                 col = "steelblue", main = "Timed Proportion Correct", xlab = "Proportion")
   }
+
